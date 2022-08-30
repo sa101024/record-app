@@ -1,0 +1,59 @@
+.record-details {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: start;
+  grid-gap: 60px;
+}
+
+/* record summary */
+.record-summary {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+.record-summary .start-date {
+  margin: 10px 0;
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+.record-summary .details {
+  margin: 20px 0;
+  color: var(--text-color);
+  line-height: 1.8em;
+  font-size: 0.9em;
+}
+.record-summary .details {
+  margin-top: 20px;
+}
+
+/* record progress */
+.record-progress {
+  margin-bottom: 0px;
+}
+.record-progress textarea {
+  min-height: 40px;
+  font-size: 1.2em;
+}
+
+/* progress list */
+.record-progress h4 {
+  color: var(--heading-color);
+}
+.record-progress li {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #f2f2f2;
+  margin-top: 20px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.05);
+}
+.progress-date {
+  color: var(--text-color);
+  font-size: 0.9em;
+  margin: 4px 0 10px;
+}
+.progress-content {
+  color: var(--text-color);
+  font-size: 0.9em;
+}

@@ -1,0 +1,40 @@
+.record-list {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+}
+.record-list a {
+  background: #fff;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+.record-list h4 {
+  font-size: 0.9em;
+  color: var(--heading-color);
+}
+.record-list p {
+  color: var(--text-color);
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+.record-list button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ddd;
+  color: var(--text-color);
+  border: none;
+  padding: 12px 8px;
+  text-align: center;
+  line-height: 0;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.dark {
+  background: #333;
+}
