@@ -10,7 +10,7 @@ export default function Dashboard() {
   const { documents, error } = useCollection(
     'records',
     ['uid', '==', user.uid],
-    ['createdAt', 'desc']
+    ['startDate', 'desc']
   )
 
   return (
