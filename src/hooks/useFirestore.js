@@ -38,7 +38,6 @@ export const useFirestore = (c) => {
 
     try {
       const createdAt = timestamp
-      console.log(createdAt)
       const addedDocument = await addDoc(ref, { ...doc, createdAt })
       dispatch({ type: 'ADDED_DOCUMENT', payload: addedDocument })
     }

@@ -13,7 +13,6 @@ export const useDocument = (c, id) => {
     const unsubscribe = onSnapshot(docRef, (snapshot) => {
       if (snapshot.data()) {
         setDocument({...snapshot.data(), id: snapshot.id})
-        // console.log(snapshot.data().createdAt.toDate())
         setError(null)
       } else {
         setError('no such document exists')
