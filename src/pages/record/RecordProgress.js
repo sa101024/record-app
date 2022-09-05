@@ -4,7 +4,7 @@ import formatDistanceToNow from "date-fns/formatDistanceToNow"
 import { Timestamp } from 'firebase/firestore'
 
 export default function RecordProgress({ record }) {
-  const { updateDocument, response } = useFirestore('records')
+  const { updateDocument, deleteDocument, response } = useFirestore('records')
   const [latestProgress, setLatestProgress] = useState('');
 
   const handleSubmit = async (e) => {
@@ -27,7 +27,7 @@ export default function RecordProgress({ record }) {
     <div className="record-progress">
       <h4>Record Your Progress</h4>
       
-      <ul>
+      <ul className="progress-list">
         {record.progress.length > 0 && record.progress.map(p => (
           <li key={p.id}>
             <div className="progress-date">
@@ -36,6 +36,7 @@ export default function RecordProgress({ record }) {
             <div className="progress-content">
               <p>{p.content}</p>
             </div>
+            <botton onChlick={() => deleteDocument(p.id)}>X</botton>
           </li>
         ))}
       </ul>
