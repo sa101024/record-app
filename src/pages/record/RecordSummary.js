@@ -17,7 +17,7 @@ export default function RecordSummary({record}) {
         <p className="start-date">Start at {record.startDate}</p>
         <p className="details">{record.details}</p>
       </div>
-      <button className="btn" onClick={handleClick}>Completed</button>
+      <button className="btn" onClick={handleClick}>Delete the record</button>
     </div>
   )
 }
