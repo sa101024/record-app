@@ -4,11 +4,12 @@ import formatDistanceToNow from "date-fns/formatDistanceToNow"
 import { Timestamp } from 'firebase/firestore'
 
 export default function RecordProgress({ record }) {
-  const { updateDocument, deleteDocument, response } = useFirestore('records')
+  const { updateDocument, response } = useFirestore('records')
   const [latestProgress, setLatestProgress] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const progressToAdd = {
       content: latestProgress,
       progressAddedAt: Timestamp.fromDate(new Date()),
@@ -36,7 +37,6 @@ export default function RecordProgress({ record }) {
             <div className="progress-content">
               <p>{p.content}</p>
             </div>
-            <botton onChlick={() => deleteDocument(p.id)}>X</botton>
           </li>
         ))}
       </ul>
