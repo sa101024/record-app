@@ -13,6 +13,8 @@ export default function Dashboard() {
     ['startDate', 'desc']
   )
 
+  console.log(documents)
+
   return (
     <div>
       <h2 className='page-title'>Dashboard</h2>
